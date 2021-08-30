@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/properties/
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
