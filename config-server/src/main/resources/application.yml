@@ -2,6 +2,6 @@ server:
   port: 8000
 spring:
   profiles:
-    active: native
+    active: native,sit
   application:
     name: config-server

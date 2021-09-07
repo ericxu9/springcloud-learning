@@ -3,11 +3,13 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/properties/
+          search-locations: classpath:/properties/sit/
 
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     service-url:
       defaultZone: http://127.0.0.1:9000/eureka

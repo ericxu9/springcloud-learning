@@ -1,0 +1,23 @@
+
+server:
+  port: 9100
+spring:
+  config:
+    import: configserver:http://127.0.0.1:8000
+  application:
+    name: feign-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      name: common-config
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka

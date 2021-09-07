@@ -25,11 +25,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -47,6 +43,8 @@
     <modules>
         <module>config-server</module>
         <module>eureka-server</module>
+        <module>feign-server</module>
+        <module>feign-client</module>
     </modules>
 
     <build>
